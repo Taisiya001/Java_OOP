@@ -4,7 +4,7 @@ public class Students extends User{
 
     private Long studentID;
 
-    public Students(String firstName, String lastName, String patronymic, Long aLong) {
+    public Students(String firstName, String lastName, String patronymic, Long studentID) {
         super(firstName, lastName, patronymic);
         this.studentID = studentID;
     }

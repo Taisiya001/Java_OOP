@@ -12,11 +12,12 @@ import java.util.List;
 //(входные параметры - (Teacher, List<Strudent>)) формирования из
 //Студентов и Преподавателя УчебнойГруппы и возвращения его
 public class StudentGroupService  {
-    public List<StudentGroup> createStudyGroup(Teacher teacher, List<Students> studentsList){
-        List<StudentGroup> studentGroupList = new ArrayList<>();
-        studentGroupList.add(new StudentGroup(teacher, studentsList));
-        return studentGroupList;
-    }
+    public List<StudentGroup> completeStudyGroup(Teacher teacher, List<Students> studentsList) {
+        List<StudentGroup> studyGroupList = new ArrayList<>();
+        studyGroupList.add(new StudentGroup(teacher,studentsList));
+        return studyGroupList;
 
+    };
 }
+
 
