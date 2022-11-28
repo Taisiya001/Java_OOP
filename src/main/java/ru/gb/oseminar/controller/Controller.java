@@ -1,16 +1,17 @@
 package ru.gb.oseminar.controller;
 
-import ru.gb.oseminar.data.StudentGroup;
-import ru.gb.oseminar.data.Students;
-import ru.gb.oseminar.data.Teacher;
-import ru.gb.oseminar.data.User;
+import ru.gb.oseminar.data.*;
 import ru.gb.oseminar.service.StudentGroupService;
 import ru.gb.oseminar.service.UserService;
 import ru.gb.oseminar.view.StudentView;
 //Создать метод в Контроллере, в котором агрегируются
 //функции получения списка студентов (их id) и преподавателя (его id)
 //и формирования учебной группы, путем вызова метода из сервиса
+//в Контроллере реализовать метод принимающий List<StudentGroup> и сортирующий с помощью компаратора,
+////    и вызывающий метод view для отображения
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 public class Controller {
@@ -45,5 +46,9 @@ public class Controller {
 
     public void showStudyGroups(List<StudentGroup> StudentGroups){
         studentView.showStudyGroups(StudentGroups);
+    }
+    public void showSortStudyGroup(List<Students> studentsList){
+        Collections.sort(studentsList, new StudentGroupComparator());
+        studentView.showStudents(studentsList);
     }
 }
