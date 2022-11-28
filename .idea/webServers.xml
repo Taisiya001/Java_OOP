@@ -2,12 +2,8 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="ccc65117-7606-40a9-87a2-63ebdbd9bb2d" name="https://github.com/Taisiya001/Java_OOP.git">
-        <fileTransfer accessType="LOCAL" port="0">
-          <advancedOptions>
-            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
-          </advancedOptions>
-        </fileTransfer>
+      <webServer id="ccc65117-7606-40a9-87a2-63ebdbd9bb2d" name="https://github.com/Taisiya001/Java_OOP.git" url="https://github.com/Taisiya001/Java-OOP-2.git">
+        <fileTransfer accessType="LOCAL" port="0" />
       </webServer>
     </option>
   </component>
