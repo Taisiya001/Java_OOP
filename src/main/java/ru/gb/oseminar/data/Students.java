@@ -1,12 +1,15 @@
 package ru.gb.oseminar.data;
 
+import java.util.concurrent.atomic.AtomicLong;
+
 public class Students extends User{
 
     private Long studentID;
+    private  static final AtomicLong id = new AtomicLong(0);
 
-    public Students(String firstName, String lastName, String patronymic, Long studentID) {
+    public Students(String firstName, String lastName, String patronymic) {
         super(firstName, lastName, patronymic);
-        this.studentID = studentID;
+        this.studentID = id.incrementAndGet();
     }
 
     public Long getStudentID() {
@@ -16,5 +19,6 @@ public class Students extends User{
     public void setStudentID(Long studentID) {
         this.studentID = studentID;
     }
+
 
 }
